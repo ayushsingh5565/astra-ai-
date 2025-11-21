@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,7 +45,7 @@
         left: 0;
         width: 100%;
         height: 100%; 
-        background: linear-gradient(to bottom, transparent 50%, rgba(0, 255, 65, 0.02) 51%, transparent 52%);
+        background: linear-gradient(to bottom, transparent 50%, rgba(255, 0, 0, 0.05) 51%, transparent 52%);
         background-size: 100% 4px;
         pointer-events: none;
         z-index: 50;
@@ -60,6 +61,15 @@
         opacity: 0;
         animation: flicker 0.15s infinite;
         pointer-events: none;
+      }
+
+      @keyframes red-alert {
+        0%, 100% { box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.1); }
+        50% { box-shadow: inset 0 0 100px rgba(255, 0, 0, 0.4); }
+      }
+      
+      .animate-red-alert {
+        animation: red-alert 2s infinite;
       }
       
       /* CRT Effect */
@@ -86,6 +96,7 @@
                 blue: '#00F0FF',
                 green: '#00FF41',
                 darkgray: '#0A0A0A',
+                danger: '#FF0000', // Added Danger Red
               }
             },
             fontFamily: {

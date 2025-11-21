@@ -3,6 +3,13 @@ export enum Role {
   MODEL = 'model'
 }
 
+export interface Attachment {
+  file: File;
+  previewUrl: string;
+  base64: string;
+  mimeType: string;
+}
+
 export interface Message {
   id: string;
   role: Role;
@@ -10,6 +17,9 @@ export interface Message {
   timestamp: number;
   isCode?: boolean;
   language?: string;
+  image?: string; // Base64 or URL
+  video?: string; // URL
+  isLiveAudio?: boolean;
 }
 
 export enum AppMode {
