@@ -1,0 +1,7 @@
+{
+  "name": "ASTRA AI",
+  "description": "The Ultimate Cyber-Sentinel. A futuristic Indian cyberpunk AI interface.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
